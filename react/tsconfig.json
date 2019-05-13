@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017", "dom"],
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types"],
+    "sourceMap": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": true
+  },
+  "typeAcquisition": {
+    "enable": false
+  },
+  "exclude": ["node_modules", "**/*.test.ts"],
+  "include": ["./**/*.ts", "./typings/*.d.ts"]
+}

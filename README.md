@@ -1,2 +1,3 @@
-# admin-graphiql
-GraphiQL IDE for VTEX Admin
+  # Admin GraphiQL - VTEX IO
+
+  

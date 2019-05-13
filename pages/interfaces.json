@@ -1,0 +1,11 @@
+{
+  "guide": {
+    "around": ["layout"]
+  },
+  "guide.home": {
+    "component": "Home"
+  },
+  "layout": {
+    "component": "PageLayout"
+  }
+}

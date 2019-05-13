@@ -1,0 +1,22 @@
+{
+  "name": "admin-graphiql",
+  "vendor": "vtex",
+  "version": "0.1.0",
+  "title": "Admin GraphiQL",
+  "description": "GraphiQL IDE for VTEX Admin",
+  "scripts": {
+    "prereleasy": "bash pre.sh"
+  },
+  "builders": {
+    "pages": "1.x",
+    "react": "3.x"
+  },
+  "dependencies": {
+    "vtex.graphql-example": "0.x",
+    "vtex.styleguide": "9.x"
+  },
+  "mustUpdateAt": "2020-05-13",
+  "registries": [
+    "smartcheckout"
+  ]
+}
