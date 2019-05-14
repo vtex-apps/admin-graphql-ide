@@ -3,7 +3,7 @@ import React, { FunctionComponent } from 'react'
 import { Helmet, NoSSR } from 'vtex.render-runtime'
 
 function graphQLFetcher(graphQLParams: any) {
-  return fetch('/_v/private/graphql', { // window.location.origin + '/graphql'              /_v/segment/graphql
+  return fetch('/_v/private/graphql/v1', {
     body: JSON.stringify(graphQLParams),
     headers: { 'Content-Type': 'application/json' },
     method: 'post',

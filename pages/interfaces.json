@@ -1,8 +1,8 @@
 {
-  "guide": {
+  "graphiql": {
     "around": ["layout"]
   },
-  "guide.home": {
+  "graphiql.home": {
     "component": "Home"
   },
   "layout": {
