@@ -22,3 +22,5 @@ const Home: FunctionComponent = () => (
 )
 
 export default Home
+
+// OBS: inside navigation.json: accountSettings for "section" is a possibility as well
