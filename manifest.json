@@ -9,7 +9,7 @@
   },
   "builders": {
     "pages": "1.x",
-    "react": "3.x"
+    "react": "3.x" 
   },
   "dependencies": {
     "vtex.graphql-example": "0.x",
