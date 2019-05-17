@@ -5,6 +5,7 @@
     "graphiql": "^0.13.0",
     "graphql": "^14.0.2",
     "highlight.js": "^9.13.1",
+    "ramda": "^0.26.1",
     "react": "^16.6.3",
     "react-apollo": "^2.3.1",
     "react-dom": "^16.0.0",

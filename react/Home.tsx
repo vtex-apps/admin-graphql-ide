@@ -1,8 +1,11 @@
+// import AppPicker from './components/appPicker';
 import GraphiQL from 'graphiql'
 import React, { FunctionComponent } from 'react'
 import { Helmet, NoSSR } from 'vtex.render-runtime'
-import { Dropdown } from 'vtex.styleguide'
+import { EXPERIMENTAL_Select } from 'vtex.styleguide'
 // import { Apps } from '@vtex/api'
+
+import { Controllers } from './typings/global'
 
 function graphQLFetcher(graphQLParams: any) {
   return fetch('/_v/private/graphql/v1', {
@@ -12,22 +15,30 @@ function graphQLFetcher(graphQLParams: any) {
   }).then(response => response.json())
 }
 
+interface Props {
+  controllers: Controllers
+  setControllers: any
+}
+
 const Home: FunctionComponent = () => (
   <div className="vh-100 flex flex-grow-1">
+    {/* <AppPicker controllers={this.props.controllers} setControllers={this.props.setControllers} /> */}
+    {/* <AppPicker controllers={undefined} setControllers={undefined} /> */}
     <div className="mb5">
-      <Dropdown
-        label="Dropdown Example - Regular size" // optional line: size="small" or "large"
-        options= //await ctx.apps.getDependencies()
-          {[
-            { value: 'chagall', label: 'Chagall' },
-            { value: 'dali', label: 'Dali' },
-            { value: 'goya', label: 'Goya' },
-            { value: 'monet', label: 'Monet' },
-            { value: 'picasso', label: 'Picasso' },
-            { value: 'tolouseLautrec', label: 'Toulouse-Lautrec' },
+      <EXPERIMENTAL_Select
+        label="Choose your app from the list below"
+        options={[ // await ctx.apps.getDependencies()
+            { value: 'app1', label: 'App 1' },
+            { value: 'app2', label: 'App 2' },
+            { value: 'app3', label: 'App 3' },
+            { value: 'app4', label: 'App 4' },
+            { value: 'app5', label: 'App 5' },
+            { value: 'app6', label: 'App 6' },
           ]}
-        value="tolouseLautrec"
-        onChange={() => {}}
+        multi={false}
+        onChange={values => {
+          console.log(`[Select] Selected: ${JSON.stringify(values, null, 2)}`)
+        }}
       />
     </div>
     <Helmet>
