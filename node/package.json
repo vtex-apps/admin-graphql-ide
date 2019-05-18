@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.x",
+    "@types/ramda": "^0.26.8",
+    "@vtex/api": "^3.16.0",
+    "eslint": "^5.15.1",
+    "eslint-config-vtex": "^10.1.0",
+    "eslint-config-vtex-react": "^4.1.0",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.0",
+    "tslint-config-vtex": "^2.1.0",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "check": "tsc --noEmit && tslint -c tslint.json './**/*.ts'"
+  }
+}
