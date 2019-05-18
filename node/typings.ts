@@ -1,5 +1,7 @@
 import { ServiceContext } from '@vtex/api'
 
+import { Clients } from './clients'
+
 declare global {
-  type Context = ServiceContext
+  type Context = ServiceContext<Clients>
 }

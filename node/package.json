@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "co-body": "^6.0.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
+    "@types/co-body": "^0.0.3",
     "@types/node": "12.x",
     "@types/ramda": "^0.26.8",
     "@vtex/api": "^3.16.0",

@@ -14,10 +14,15 @@
     "react": "3.x" 
   },
   "dependencies": {
-    "vtex.styleguide": "9.x"
+    "vtex.styleguide": "9.x",
+    "vtex.graphql-server": "1.x"
   },
-  "mustUpdateAt": "2020-05-13",
-  "registries": [
-    "smartcheckout"
+  "policies": [
+    {
+      "name": "read-workspace-apps"
+    },
+    {
+      "name": "vtex.graphql-server:resolve-graphiql"
+    }
   ]
 }

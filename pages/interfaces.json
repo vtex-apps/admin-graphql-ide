@@ -2,8 +2,8 @@
   "graphiql": {
     "around": ["layout"]
   },
-  "graphiql.home": {
-    "component": "Home"
+  "graphiql.graphiql": {
+    "component": "GraphiQL"
   },
   "layout": {
     "component": "PageLayout"

@@ -3,5 +3,11 @@
   "ttl": 43200,
   "timeout": 1,
   "minReplicas": 2,
-  "maxReplicas": 4
+  "maxReplicas": 4,
+  "routes": {
+    "graphqlProxy": {
+      "path": "/_v/private/admin-graphiql/v0/:appId",
+      "public": true
+    }
+  }
 }

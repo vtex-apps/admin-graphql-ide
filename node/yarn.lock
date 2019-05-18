@@ -98,6 +98,15 @@
     "@types/connect" "*"
     "@types/node" "*"
 
+"@types/co-body@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/co-body/-/co-body-0.0.3.tgz#cd65c1b986f003fea2d50334c2654fbcd479c741"
+  integrity sha512-Arrl3/wGJ2+tmwPTEESQpKxBXbvTNwPA5fgSfk5IdL+drDnkT2CSOn/FPcBqpxCCF/SoaNfm9W/OgWLTydMKuw==
+  dependencies:
+    "@types/koa" "*"
+    "@types/node" "*"
+    "@types/qs" "*"
+
 "@types/connect@*":
   version "3.4.32"
   resolved "https://registry.yarnpkg.com/@types/connect/-/connect-3.4.32.tgz#aa0e9616b9435ccad02bc52b5b454ffc2c70ba28"
@@ -195,6 +204,11 @@
   version "10.14.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.4.tgz#1c586b991457cbb58fef51bc4e0cfcfa347714b5"
   integrity sha512-DT25xX/YgyPKiHFOpNuANIQIVvYEwCWXgK2jYYwqgaMrYE6+tq+DtmMwlD3drl6DJbUwtlIDnn0d7tIn/EbXBg==
+
+"@types/qs@*":
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.5.3.tgz#1c3b71b091eaeaf5924538006b7f70603ce63d38"
+  integrity sha512-Jugo5V/1bS0fRhy2z8+cUAHEyWOATaz4rbyLVvcFs7+dXp5HfwpEwzF1Q11bB10ApUqHf+yTauxI0UXQDwGrbA==
 
 "@types/ramda@^0.26.8":
   version "0.26.8"
