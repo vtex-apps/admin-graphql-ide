@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "bluebird": "^3.5.4",
     "co-body": "^6.0.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
+    "@types/bluebird": "^3.5.26",
     "@types/co-body": "^0.0.3",
     "@types/node": "12.x",
     "@types/ramda": "^0.26.8",

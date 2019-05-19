@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "lib": ["es2017", "dom"],
-    "types": ["node", "jest"],
-    "typeRoots": ["node_modules/@types"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "sourceMap": true,
     "jsx": "react",
+    "target": "es2017",
     "allowSyntheticDefaultImports": true,
     "noEmitOnError": true,
     "noImplicitReturns": true,
@@ -16,11 +21,19 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "skipLibCheck": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "module": "es6",
+    "moduleResolution": "node"
   },
   "typeAcquisition": {
     "enable": false
   },
-  "include": ["./**/*.ts", "./typings/*.d.ts", "../typedql/*.ts", "graphql/getApps.tsx"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "include": [
+    "**/*.ts",
+    "typings/*.d.ts",
+    "../typedql/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
