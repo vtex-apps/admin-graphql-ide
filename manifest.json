@@ -10,6 +10,7 @@
   "builders": {
     "node": "4.x",
     "typedql": "0.x",
+    "messages": "1.x",
     "pages": "1.x",
     "react": "3.x" 
   },
@@ -23,6 +24,16 @@
     },
     {
       "name": "vtex.graphql-server:resolve-graphiql"
+    },
+    {
+      "name": "sphinx-is-admin"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "vtexid.vtex.com.br",
+        "path": "/api/vtexid/pub/authenticated/user"
+      }
     }
   ]
 }

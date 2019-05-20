@@ -15,11 +15,10 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
     "skipLibCheck": true,
     "strictPropertyInitialization": true,
     "module": "es6",
@@ -30,8 +29,8 @@
   },
   "include": [
     "**/*.ts",
-    "typings/*.d.ts",
-    "../typedql/*.ts"
+    "./typings/**/*.d.ts",
+    "../typedql/*.ts", "components/ErrorState.tsx"
   ],
   "exclude": [
     "node_modules"
