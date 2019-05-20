@@ -8,11 +8,11 @@ type Data = Pick<Query, 'apps'>
 
 export const GetApps: FunctionComponent = ({children}) => (
  <QueryComponent<Data> query={getAppsQuery}>
-  {({data, loading}) => {
-    if (loading) {
-      return null
-    }
-    return children(data)
-  }}
+    {({data, loading}) => {
+      if (loading) {
+        return null
+      }
+      return children(data)
+    }}
   </QueryComponent>
 )

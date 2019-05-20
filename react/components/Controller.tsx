@@ -86,7 +86,7 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
 
   public render = () => (
     <Fragment>
-      <div className="mb5">
+      <div className="mb5 z-max">
         <EXPERIMENTAL_Select
           label={this.props.intl.formatMessage(messages.appChooser)}
           options={this.props.apps.map(app => ({value: app, label: app}))}

@@ -11,7 +11,7 @@ const messages = defineMessages({
 
 // This component generates the base layout for this app.
 const PageLayout: FunctionComponent<InjectedIntlProps> = ({ children, intl }) => (
-  <Layout pageHeader={<PageHeader title={intl.formatMessage(messages.title)} />}>
+  <Layout fullWidth pageHeader={<PageHeader title={intl.formatMessage(messages.title)} />}>
     <PageBlock>
       {children}
     </PageBlock>
