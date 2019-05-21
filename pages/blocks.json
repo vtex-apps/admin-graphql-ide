@@ -1,0 +1,10 @@
+{
+    "inject#admin-graphiql": {
+        "props": {
+            "titleId": "admin/layout.title",
+            "path": "/admin/graphiql",
+            "group": "storeSetup",
+            "icon": "master-data-ic"
+        }
+    }
+}

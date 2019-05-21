@@ -1,9 +1,7 @@
 {
-  "graphiql": {
+  "admin.graphiql": {
+    "component": "GraphiQL",
     "around": ["layout"]
-  },
-  "graphiql.graphiql": {
-    "component": "GraphiQL"
   },
   "layout": {
     "component": "PageLayout"

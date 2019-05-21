@@ -12,11 +12,12 @@
     "typedql": "0.x",
     "messages": "1.x",
     "pages": "1.x",
-    "react": "3.x" 
+    "react": "3.x"
   },
   "dependencies": {
     "vtex.styleguide": "9.x",
-    "vtex.graphql-server": "1.x"
+    "vtex.graphql-server": "1.x",
+    "vtex.admin": "2.x"
   },
   "policies": [
     {

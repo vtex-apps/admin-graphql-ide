@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "admin/error.state",
+    "admin/error.title": "admin/error.title",
+    "admin/no-app-selected.title": "admin/no-app-selected.title",
+    "admin/no-app-selected.state": "admin/no-app-selected.state",
+    "admin/layout.title": "admin/layout.title",
+    "admin/controller.app-picker": "admin/controller.app-picker"
+}

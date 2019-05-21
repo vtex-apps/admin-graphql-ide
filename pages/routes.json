@@ -1,5 +1,5 @@
 {
-  "graphiql.graphiql": {
+  "admin.graphiql": {
     "path": "/admin/graphiql"
   }
 }
