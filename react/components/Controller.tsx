@@ -109,7 +109,7 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
         ? (
           <GraphiQL 
             fetcher={this.state.fetcher} 
-            storage={getOrCreateScopedStorage(this.state.chosenAppId)}
+            storage={getOrCreateScopedStorage(this.state.chosenAppId!)}
             schema={this.state.schema}
           />
         )

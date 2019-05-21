@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Helmet, NoSSR } from 'vtex.render-runtime'
 
 import { GraphiQLController } from './components/Controller'
