@@ -55,7 +55,7 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
     }
   }
 
-  public setState = (state: ((x: Partial<State>) => State) | Partial<State>, cb?: () => void) => {
+  public setState = (state: ((x: State) => State) | Partial<State>, cb?: () => void) => {
     const {schema, chosenAppId, error, fetcher} = typeof state === 'function' ? state(this.state) : {...this.state, ...state}
     let mode: ViewState
     if (error) {
@@ -132,7 +132,7 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
 
   private fetchSchema = async () => {
     try {
-      const response = await this.state.fetcher({query: introspectionQuery})
+      const response = await this.state.fetcher!({query: introspectionQuery})
       const schema = path(['data'], response) as IntrospectionQuery | undefined
       this.setState({
         schema: schema && buildClientSchema(schema),

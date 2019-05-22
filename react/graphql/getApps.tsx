@@ -6,13 +6,17 @@ import getAppsQuery from './apps.graphql'
 
 type Data = Pick<Query, 'apps'>
 
-export const GetApps: FunctionComponent = ({children}) => (
+interface Props {
+  children: (data: any) => React.ReactNode
+}
+
+export const GetApps: FunctionComponent<Props> = ({children}) => (
  <QueryComponent<Data> query={getAppsQuery}>
     {({data, loading}) => {
       if (loading) {
         return null
       }
-      return children(data)
+      return children!(data)
     }}
   </QueryComponent>
 )
