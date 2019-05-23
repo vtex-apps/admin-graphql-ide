@@ -1,0 +1,10 @@
+{
+    "admin.app.admin-graphiql": {
+        "component": "GraphiQL",
+        "path": "/admin/app/graphiql",
+        "around": ["layout"]
+    },
+    "admin.app.layout": {
+        "component": "PageLayout"
+    }
+}
