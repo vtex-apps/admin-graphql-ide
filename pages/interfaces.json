@@ -1,9 +1,0 @@
-{
-  "admin.graphql-ide": {
-    "component": "GraphiQL",
-    "around": ["layout"]
-  },
-  "layout": {
-    "component": "PageLayout"
-  }
-}
