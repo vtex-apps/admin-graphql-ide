@@ -1,8 +1,8 @@
 {
-    "inject#admin-graphiql": {
+    "inject#admin-graphql-ide": {
         "props": {
             "titleId": "admin/layout.title",
-            "path": "/admin/graphiql",
+            "path": "/admin/graphql-ide",
             "group": "storeSetup",
             "icon": "master-data-ic"
         }

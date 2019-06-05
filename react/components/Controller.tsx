@@ -30,7 +30,7 @@ interface Props extends InjectedIntlProps {
   apps: string[]
 }
 
-const fetcherForApp = (appId: string) => (params: any) => fetch(`/_v/private/admin-graphiql/v0/${appId}`, {
+const fetcherForApp = (appId: string) => (params: any) => fetch(`/_v/private/admin-graphql-ide/v0/${appId}`, {
   body: JSON.stringify(params),
   headers: { 'Content-Type': 'application/json' },
   method: 'post',
