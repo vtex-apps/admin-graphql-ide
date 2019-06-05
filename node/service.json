@@ -6,7 +6,7 @@
   "maxReplicas": 4,
   "routes": {
     "graphqlProxy": {
-      "path": "/_v/private/admin-graphiql/v0/:appId",
+      "path": "/_v/private/admin-graphql-ide/v0/:appId",
       "public": true
     }
   }

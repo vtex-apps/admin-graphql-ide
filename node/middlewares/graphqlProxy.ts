@@ -15,12 +15,12 @@ export const ensureAdminUser = async (clients: Pick<Clients, 'sphinx' | 'vtexID'
 
   const {user: email} = (await vtexID.getIdUser(idToken)) || EMPTY_OBJECT as any
   if (!email) {
-    throw new ForbiddenError('User must have a valid email to use admin-graphiql')
+    throw new ForbiddenError('User must have a valid email to use admin-graphql-ide')
   }
 
   const isAdminUser = await sphinx.isAdmin(email)
   if (!isAdminUser) {
-    throw new ForbiddenError('User must be admin to use admin-graphiql')
+    throw new ForbiddenError('User must be admin to use admin-graphql-ide')
   }
 }
 
