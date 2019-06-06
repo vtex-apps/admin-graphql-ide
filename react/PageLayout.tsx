@@ -5,7 +5,7 @@ import { Layout, PageBlock, PageHeader } from 'vtex.styleguide'
 const messages = defineMessages({
   title: {
     id: 'admin/layout.title',
-    defaultMessage: 'Admin GraphiQL'
+    defaultMessage: 'GraphQL IDE'
   }
 })
 
