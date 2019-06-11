@@ -4,8 +4,6 @@ import { Helmet, NoSSR } from 'vtex.render-runtime'
 import { GraphiQLController } from './components/Controller'
 import { GetApps } from './graphql/getApps'
 
-// import 'graphiql/grs.css'
-
 const Index: FunctionComponent = () => (
   <div className="vh-100 flex flex-column flex-grow-1">
     <NoSSR>
