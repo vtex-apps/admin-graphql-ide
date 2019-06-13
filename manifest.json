@@ -1,23 +1,25 @@
 {
   "name": "admin-graphql-ide",
   "vendor": "vtex",
-  "version": "0.3.1",
+  "version": "3.0.0",
   "title": "Admin GraphQL IDE",
   "description": "GraphQL IDE for VTEX Admin (GraphiQL)",
   "scripts": {
     "prereleasy": "bash pre.sh"
   },
   "builders": {
+    "admin": "0.x",
     "node": "4.x",
     "typedql": "0.x",
     "messages": "1.x",
-    "pages": "1.x",
     "react": "3.x"
   },
   "dependencies": {
     "vtex.styleguide": "9.x",
-    "vtex.graphql-server": "1.x",
-    "vtex.admin": "2.x"
+    "vtex.graphql-server": "1.x"
+  },
+  "peerDependencies": {
+    "vtex.admin": "3.x"
   },
   "policies": [
     {
