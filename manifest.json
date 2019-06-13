@@ -18,6 +18,9 @@
     "vtex.styleguide": "9.x",
     "vtex.graphql-server": "1.x"
   },
+  "peerDependencies": {
+    "vtex.admin": "3.x"
+  },
   "policies": [
     {
       "name": "read-workspace-apps"
