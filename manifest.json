@@ -1,7 +1,7 @@
 {
   "name": "admin-graphql-ide",
   "vendor": "vtex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Admin GraphQL IDE",
   "description": "GraphQL IDE for VTEX Admin (GraphiQL)",
   "scripts": {
