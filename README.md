@@ -7,9 +7,9 @@
   ```
   vtex install vtex.admin-graphql-ide
   ```
-  
-  Obs: This will install the latest version of `Admin GraphQL IDE`, that requires `vtex.admin@3.x` installed. If you need to keep using `vtex.admin@2.x` in your workspace and cannot upgrade it to `vtex.admin@3.x`, you can run `vtex install vtex.admin-graphql-ide@2.x` that is compatible with this `admin` major version.
 
   As soon as the app is installed the button `GraphQL IDE` will already appear in the section "Store Setup" of your `admin` menu (left side of your screen in the admin page). 
   
   The URL path is `<your-website>/admin/graphql-ide`. Have fun!
+
+  > Obs: The `vtex install` command above will install the latest version of `Admin GraphQL IDE`, that requires `vtex.admin@3.x` installed. If you need to keep using `vtex.admin@2.x` in your workspace and cannot upgrade it to `vtex.admin@3.x`, you can run `vtex install vtex.admin-graphql-ide@2.x` that is compatible with this prior `admin` major version.
