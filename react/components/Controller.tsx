@@ -55,8 +55,8 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
     }
   }
 
-  public setState = (state: ((x: State) => State) | Partial<State>, cb?: () => void) => {
-    const {schema, chosenAppId, error, fetcher} = typeof state === 'function' ? state(this.state) : {...this.state, ...state}
+  public setState = (state: any, cb?: () => void) => {
+    const { schema, chosenAppId, error, fetcher }: any = typeof state === 'function' ? state(this.state) : { ...this.state, ...state }
     let mode: ViewState
     if (error) {
       mode = ViewState.ON_ERROR
@@ -67,9 +67,9 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
     } else {
       mode = ViewState.ON_SELECT_APP
     }
-    
+
     super.setState({
-      schema, 
+      schema,
       chosenAppId,
       error,
       fetcher,
@@ -89,9 +89,9 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
       <div className="mb5 z-max">
         <EXPERIMENTAL_Select
           label={this.props.intl.formatMessage(messages.appChooser)}
-          options={this.props.apps.map(app => ({value: app, label: app}))}
+          options={this.props.apps.map(app => ({ value: app, label: app }))}
           multi={false}
-          onChange={(chosen: {value?: string} | null) => this.setState(
+          onChange={(chosen: { value?: string } | null) => this.setState(
             (oldState: State) => {
               const chosenAppId = chosen ? chosen.value : undefined
               return {
@@ -106,33 +106,33 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
       </div>
       {
         this.state.mode === ViewState.ON_GRAPHIQL
-        ? (
-          <GraphiQL 
-            fetcher={this.state.fetcher} 
-            storage={getOrCreateScopedStorage(this.state.chosenAppId!)}
-            schema={this.state.schema}
-          />
-        )
-        : this.state.mode === ViewState.ON_SELECT_APP
-        ? (
-          <NoAppSelected />
-        )
-        : this.state.mode === ViewState.ON_FETCHING_SCHEMA
-        ? (
-          <Spinner />
-        )
-        : (
-          <ErrorState
-            onRetryClick={() => this.setState({error: false})} 
-          />
-        )
+          ? (
+            <GraphiQL
+              fetcher={this.state.fetcher}
+              storage={getOrCreateScopedStorage(this.state.chosenAppId!)}
+              schema={this.state.schema}
+            />
+          )
+          : this.state.mode === ViewState.ON_SELECT_APP
+            ? (
+              <NoAppSelected />
+            )
+            : this.state.mode === ViewState.ON_FETCHING_SCHEMA
+              ? (
+                <Spinner />
+              )
+              : (
+                <ErrorState
+                  onRetryClick={() => this.setState({ error: false })}
+                />
+              )
       }
     </Fragment>
   )
 
   private fetchSchema = async () => {
     try {
-      const response = await this.state.fetcher!({query: introspectionQuery})
+      const response = await this.state.fetcher!({ query: introspectionQuery })
       const schema = path(['data'], response) as IntrospectionQuery | undefined
       this.setState({
         schema: schema && buildClientSchema(schema),
@@ -140,7 +140,7 @@ class GraphiQLControllerComponent extends React.Component<Props, State> {
       })
     }
     catch (_) {
-      this.setState({error: true})
+      this.setState({ error: true })
     }
   }
 }

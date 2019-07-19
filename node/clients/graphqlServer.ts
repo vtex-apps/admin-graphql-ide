@@ -5,8 +5,9 @@ export class GraphQLServer extends AppClient {
     super('vtex.graphql-server', ctx, opts)
   }
 
-  public proxyGraphiQL = (body: any, appId: string) => this.http.post('/graphiql', body, {
+  public proxyGraphiQL = (body: any, appId: string, headers: Record<string, string>) => this.http.post('/graphiql', body, {
     headers: {
+      ...headers,
       'x-colossus-declarer-id': appId,
     },
   })

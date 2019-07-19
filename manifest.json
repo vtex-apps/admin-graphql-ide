@@ -38,5 +38,6 @@
         "path": "/api/vtexid/pub/authenticated/user"
       }
     }
-  ]
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
