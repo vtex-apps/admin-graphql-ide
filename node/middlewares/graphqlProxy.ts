@@ -1,6 +1,6 @@
 import { ForbiddenError } from '@vtex/api'
 import bodyParser from 'co-body'
-import { path } from 'ramda'
+import { path, pick } from 'ramda'
 
 import { Clients } from '../clients'
 
@@ -13,7 +13,7 @@ export const ensureAdminUser = async (clients: Pick<Clients, 'sphinx' | 'vtexID'
     throw new ForbiddenError('No VtexIdclientAutCookie provided')
   }
 
-  const {user: email} = (await vtexID.getIdUser(idToken)) || EMPTY_OBJECT as any
+  const { user: email } = (await vtexID.getIdUser(idToken)) || EMPTY_OBJECT as any
   if (!email) {
     throw new ForbiddenError('User must have a valid email to use admin-graphql-ide')
   }
@@ -25,7 +25,7 @@ export const ensureAdminUser = async (clients: Pick<Clients, 'sphinx' | 'vtexID'
 }
 
 
-export const graphqlProxy = async (ctx: Context) => {
+export async function graphqlProxy(ctx: Context) {
   const {
     clients: { graphqlServer },
     vtex: {
@@ -41,6 +41,21 @@ export const graphqlProxy = async (ctx: Context) => {
   const body = await bodyParser(ctx.req)
 
   const appId = paramAppId as string
-  ctx.body = await graphqlServer.proxyGraphiQL(body, appId).catch(path(['response', 'data']))
+
+  const headersToSend = [
+    'accept',
+    'accept-language',
+    'authorization',
+    'content-length',
+    'content-type',
+    'cookie',
+    'rest-range',
+    'user-agent',
+    'vtexidclientautcookie',
+    'x-forwarded-host',
+  ]
+  const headers = pick(headersToSend, ctx.request.headers)
+
+  ctx.body = await graphqlServer.proxyGraphiQL(body, appId, headers).catch(path(['response', 'data']))
   ctx.status = 200
 }
