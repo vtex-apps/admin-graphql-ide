@@ -9,6 +9,7 @@ const appsCacheStorage = new LRUCache<string, any>({
 })
 
 const SHORT_TIMEOUT_MS = 1 * 500
+const GRAPHQL_SERVER_TIMEOUT_MS = 60e3
 
 metrics.trackCache('apps', appsCacheStorage)
 
@@ -21,6 +22,9 @@ export default new Service<Clients>({
         retries: 1,
         timeout: SHORT_TIMEOUT_MS,
       },
+      graphqlServer: {
+        timeout: GRAPHQL_SERVER_TIMEOUT_MS
+      }
     },
   },
   graphql: {
