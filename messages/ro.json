@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "Încearcă din nou",
+    "admin/error.title": "A apărut o eroare",
+    "admin/no-app-selected.title": "Alege o aplicație",
+    "admin/no-app-selected.state": "Alege o aplicație pentru a face căutări",
+    "admin/layout.title": "GraphQL IDE",
+    "admin/controller.app-picker": "Alege o aplicație"
+}
