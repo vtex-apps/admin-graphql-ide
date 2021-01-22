@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "もう一度やり直す",
+    "admin/error.title": "エラーあり",
+    "admin/no-app-selected.title": "アプリを選ぶ",
+    "admin/no-app-selected.state": "クエリを作成するアプリを選ぶ",
+    "admin/layout.title": "GraphQL IDE",
+    "admin/controller.app-picker": "アプリを選ぶ"
+}
