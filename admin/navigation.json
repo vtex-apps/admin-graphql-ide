@@ -1,5 +1,19 @@
-{
+[
+  {
     "section": "storeSetup",
     "titleId": "admin/layout.title",
     "path": "/admin/graphql-ide"
-}
+  },
+  {
+    "adminVersion": 4,
+    "section": "storeSettings",
+    "titleId": "admin/layout.title",
+    "subSection": "storeFront",
+    "subSectionItems": [
+      {
+        "labelId": "admin/layout.title",
+        "path": "/admin/graphql-ide"
+      }
+    ]
+  }
+]
