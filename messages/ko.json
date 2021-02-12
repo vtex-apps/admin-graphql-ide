@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "다시 시도",
+    "admin/error.title": "문제가 발생했습니다",
+    "admin/no-app-selected.title": "앱 선택",
+    "admin/no-app-selected.state": "쿼리를 만들 앱 선택",
+    "admin/layout.title": "GraphQL IDE",
+    "admin/controller.app-picker": "앱 선택"
+}
