@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "Probeer het opnieuw",
+    "admin/error.title": "Er is iets misgegaan",
+    "admin/no-app-selected.title": "Kies een app",
+    "admin/no-app-selected.state": "Kies een app om vragen te stellen",
+    "admin/layout.title": "GraphQL IDE",
+    "admin/controller.app-picker": "Kies een app"
+}
