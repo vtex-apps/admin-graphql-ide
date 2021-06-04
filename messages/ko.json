@@ -1,8 +1,8 @@
 {
     "admin/error.state": "다시 시도",
     "admin/error.title": "뭔가 잘못되었습니다",
-    "admin/no-app-selected.title": "Choose an App",
-    "admin/no-app-selected.state": "Choose an App to make queries",
+    "admin/no-app-selected.title": "앱 선택",
+    "admin/no-app-selected.state": "쿼리를 만들 앱 선택",
     "admin/layout.title": "GraphQL IDE",
-    "admin/controller.app-picker": "Choose an App"
+    "admin/controller.app-picker": "앱 선택"
 }
