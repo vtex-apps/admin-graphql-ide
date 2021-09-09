@@ -1,8 +1,8 @@
 {
-  "admin/error.state": "Tentar novamente",
-  "admin/error.title": "Algo de errado aconteceu",
-  "admin/no-app-selected.title": "Escolha uma App",
-  "admin/no-app-selected.state": "Selecione uma App para realizar queries",
-  "admin/layout.title": "GraphQL IDE",
-  "admin/controller.app-picker": "Selecione uma App"
+  "admin/error.state": "Reintentar",
+  "admin/error.title": "Se produjo un error",
+  "admin/no-app-selected.title": "Seleccione una app",
+  "admin/no-app-selected.state": "Seleccione una app para realizar consultas",
+  "admin/layout.title": "IDE de GraphQL",
+  "admin/controller.app-picker": "Seleccione una app"
 }
