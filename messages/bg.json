@@ -1,0 +1,8 @@
+{
+    "admin/error.state": "Опитайте отново",
+    "admin/error.title": "Нещо се обърка",
+    "admin/no-app-selected.title": "Изберете приложение",
+    "admin/no-app-selected.state": "Изберете приложение, за да отправите заявка",
+    "admin/layout.title": "GraphQL IDE",
+    "admin/controller.app-picker": "Изберете приложение"
+}
