@@ -9,6 +9,7 @@ const appsCacheStorage = new LRUCache<string, any>({
 })
 
 const SHORT_TIMEOUT_MS = 1 * 500
+const THIRTY_SECONDS_MS = 30 * 1000
 
 metrics.trackCache('apps', appsCacheStorage)
 
@@ -16,6 +17,9 @@ export default new Service<Clients>({
   clients: {
     implementation: Clients,
     options: {
+      default: {
+        timeout: THIRTY_SECONDS_MS,
+      },
       apps: {
         memoryCache: appsCacheStorage,
         retries: 1,

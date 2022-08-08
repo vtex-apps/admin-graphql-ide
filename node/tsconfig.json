@@ -1,12 +1,8 @@
 {
   "compilerOptions": {
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "target": "es2017",
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "target": "es2019",
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": false,
@@ -26,12 +22,6 @@
   "typeAcquisition": {
     "enable": false
   },
-  "include": [
-    "./**/*.ts",
-    "./typings/*.d.ts",
-    "../typedql/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./**/*.ts", "./typings/*.d.ts", "../typedql/*.ts"],
+  "exclude": ["node_modules"]
 }

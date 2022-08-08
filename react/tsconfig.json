@@ -1,15 +1,8 @@
 {
   "compilerOptions": {
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "lib": ["es2017", "dom"],
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "jsx": "react",
     "target": "es2017",
@@ -24,7 +17,7 @@
     "alwaysStrict": true,
     "skipLibCheck": true,
     "strictPropertyInitialization": true,
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node"
   },
   "typeAcquisition": {
@@ -32,11 +25,10 @@
   },
   "include": [
     "**/*.ts",
+    "**/*.tsx",
     "./typings/**/*.d.ts",
-    "../typedql/*.ts", "components/ErrorState.tsx"
+    "../typedql/*.ts",
+    "components/ErrorState.tsx"
   ],
-  "exclude": [
-    "node_modules",
-    "**/*.flow"
-  ]
+  "exclude": ["node_modules", "**/*.flow"]
 }
