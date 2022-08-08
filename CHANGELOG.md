@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Raise timeout
+- Tooling & linting
+
 ## [3.6.0] - 2021-11-17
 
 ### Added
