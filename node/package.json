@@ -17,5 +17,5 @@
   "scripts": {
     "check": "tsc --noEmit && tslint -c tslint.json './**/*.ts'"
   },
-  "version": "3.6.0"
+  "version": "3.6.1"
 }
