@@ -1,8 +1,8 @@
 {
-    "admin/error.state": "حاول من جديد",
-    "admin/error.title": "شيء ما لا يعمل جيدًا",
-    "admin/no-app-selected.title": "اختر تطبيقًا",
-    "admin/no-app-selected.state": "اختر تطبيقًا لإجراء البحوثات",
+    "admin/error.state": "Try again",
+    "admin/error.title": "Something went wrong",
+    "admin/no-app-selected.title": "Choose an app",
+    "admin/no-app-selected.state": "Choose an app to make queries",
     "admin/layout.title": "GraphQL IDE",
-    "admin/controller.app-picker": "اختر تطبيقًا"
+    "admin/controller.app-picker": "Choose an app"
 }
