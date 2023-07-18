@@ -1,8 +1,8 @@
 {
-    "admin/error.state": "再試一次",
-    "admin/error.title": "出錯啦",
-    "admin/no-app-selected.title": "選擇應用程式",
-    "admin/no-app-selected.state": "選取要查詢的應用程式",
+    "admin/error.state": "Try again",
+    "admin/error.title": "Something went wrong",
+    "admin/no-app-selected.title": "Choose an app",
+    "admin/no-app-selected.state": "Choose an app to make queries",
     "admin/layout.title": "GraphQL IDE",
-    "admin/controller.app-picker": "選擇應用程式"
+    "admin/controller.app-picker": "Choose an app"
 }
