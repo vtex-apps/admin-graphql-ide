@@ -1,6 +1,6 @@
 {
-    "admin/error.state": "Try again",
-    "admin/error.title": "Something went wrong",
+    "admin/error.state": "다시 시도",
+    "admin/error.title": "문제가 발생했습니다",
     "admin/no-app-selected.title": "Choose an app",
     "admin/no-app-selected.state": "Choose an app to make queries",
     "admin/layout.title": "GraphQL IDE",
