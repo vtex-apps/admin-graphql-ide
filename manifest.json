@@ -9,7 +9,7 @@
   },
   "builders": {
     "admin": "0.x",
-    "node": "4.x",
+    "node": "6.x",
     "typedql": "0.x",
     "messages": "1.x",
     "react": "3.x",
