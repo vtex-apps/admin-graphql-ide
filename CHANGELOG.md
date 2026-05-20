@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.8.1-beta] - 2026-05-20
+
 ## [3.8.0] - 2025-01-06
 
 ### Added
@@ -80,3 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - I18n Ro.
 - Crowdin configuration file.
+
+
+[Unreleased]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.1-beta...HEAD
+[3.8.1-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.0...v3.8.1-beta
