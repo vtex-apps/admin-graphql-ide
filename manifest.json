@@ -9,7 +9,7 @@
   },
   "builders": {
     "admin": "0.x",
-    "node": "6.x",
+    "node": "7.x",
     "typedql": "0.x",
     "messages": "1.x",
     "react": "3.x",
@@ -32,8 +32,8 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "vtexid.vtex.com.br",
-        "path": "/api/vtexid/pub/authenticated/user"
+        "host": "api.vtexinternal.com",
+        "path": "/api/vtexid/credential/validate"
       }
     }
   ],

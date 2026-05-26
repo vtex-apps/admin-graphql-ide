@@ -1,3 +1,4 @@
+import type { ParamsContext, RecorderState } from '@vtex/api'
 import { LRUCache, Service } from '@vtex/api'
 
 import { Clients } from './clients'
@@ -13,7 +14,7 @@ const THIRTY_SECONDS_MS = 30 * 1000
 
 metrics.trackCache('apps', appsCacheStorage)
 
-export default new Service<Clients>({
+export default new Service<Clients, RecorderState, ParamsContext>({
   clients: {
     implementation: Clients,
     options: {

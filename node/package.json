@@ -7,9 +7,10 @@
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
     "@types/co-body": "^0.0.3",
-    "@types/node": "12.x",
+    "@types/node": "^20.0.0",
     "@types/ramda": "^0.26.8",
-    "@vtex/api": "6.50.1",
+    "@vtex/api": "^7.0.0",
+    "typescript": "5.5.3",
     "vtex.admin-graphql-ide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.admin-graphql-ide@3.6.0/public/@types/vtex.admin-graphql-ide",
     "vtex.graphql-server": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.graphql-server@1.67.4/public/_types/react",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.1/public/@types/vtex.styleguide"

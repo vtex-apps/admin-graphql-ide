@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Bump the `node` builder from `6.x` to `7.x` and the local `@types/node` to `20.x`; pin `typescript` to `5.x` to match the toolchain used at link time.
+- Provide the missing `RecorderState`/`ParamsContext` type arguments to `Service<Clients>` so the project type-checks under the `7.x` toolchain.
+- Refresh the `outbound-access` policy to target `api.vtexinternal.com` `/api/vtexid/credential/validate`.
 - Authenticate users against `POST /api/vtexid/credential/validate`, replacing the legacy `GET /pub/authenticated/user` call.
 - Accept the `VtexIdclientAutCookie` credential via HTTP header in addition to the cookie.
 
