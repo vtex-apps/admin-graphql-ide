@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Breaking Changes
+- **Storefront API queries through the IDE are no longer supported.** Storefront-audience cookies (`VtexIdclientAutCookie_{account}`) are now stripped from requests before they reach `vtex.graphql-server`, so resolvers that called storefront APIs by relying on this cookie will fail downstream with `FORBIDDEN`. This brings the IDE in line with the platform's audience-separation enforcement, which has been blocking the same workflow at the edge since April 27, 2026 — the practical effect of this release is to surface the failure cleanly at the IDE layer instead of letting it produce confusing errors deeper in the stack. To explore storefront APIs, use a GraphIQL running in storefront context.
+
 ## [3.8.3-beta] - 2026-05-26
 
 ### Changed
