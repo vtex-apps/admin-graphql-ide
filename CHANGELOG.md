@@ -8,14 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Breaking Changes
-- **Storefront API queries through the IDE are no longer supported.** Storefront-audience cookies (`VtexIdclientAutCookie_{account}`) are now stripped from requests before they reach `vtex.graphql-server`, so resolvers that called storefront APIs by relying on this cookie will fail downstream with `FORBIDDEN`. This brings the IDE in line with the platform's audience-separation enforcement, which has been blocking the same workflow at the edge since April 27, 2026 — the practical effect of this release is to surface the failure cleanly at the IDE layer instead of letting it produce confusing errors deeper in the stack. To explore storefront APIs, use a GraphIQL running in storefront context.
+- `VtexIdclientAutCookie_*` cookies are no longer forwarded to downstream resolvers. Queries that relied on them to call storefront APIs will return `FORBIDDEN`. Use a storefront-context GraphIQL to explore storefront APIs.
 
 ## [3.8.3-beta] - 2026-05-26
 
 ### Changed
 - Bump the `node` builder from `6.x` to `7.x` and the local `@types/node` to `20.x`; pin `typescript` to `5.x` to match the toolchain used at link time.
 - Provide the missing `RecorderState`/`ParamsContext` type arguments to `Service<Clients>` so the project type-checks under the `7.x` toolchain.
-- Refresh the `outbound-access` policy to target `api.vtexinternal.com` `/api/vtexid/credential/validate`.
+- Update the `outbound-access` policy to match the new validate endpoint.
 - Authenticate users against `POST /api/vtexid/credential/validate`, replacing the legacy `GET /pub/authenticated/user` call.
 - Accept the `VtexIdclientAutCookie` credential via HTTP header in addition to the cookie.
 
@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.8.1-beta] - 2026-05-20
 
 ### Fixed
-- Pass the account name (`an`) when calling VTEX ID `/pub/authenticated/user`, unblocking cross-account checks until the canonical `credential/validate` migration lands.
+- Pass the account name (`an`) when calling VTEX ID `/pub/authenticated/user`.
 
 ### Changed
 - Bump the `node` builder from `4.x` to `6.x`.
