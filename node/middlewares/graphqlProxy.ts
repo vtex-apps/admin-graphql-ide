@@ -43,7 +43,15 @@ export const ensureAdminUser = async (
     throw new ForbiddenError('No VtexIdclientAutCookie provided')
   }
 
-  const credential = await vtexID.validateToken(idToken).catch(() => null)
+  let credential: Awaited<ReturnType<typeof vtexID.validateToken>>
+
+  try {
+    credential = await vtexID.validateToken(idToken)
+  } catch (err) {
+    throw new ForbiddenError(
+      `Invalid VtexIdclientAutCookie: ${err?.message ?? err}`
+    )
+  }
 
   if (!credential) {
     throw new ForbiddenError('Invalid VtexIdclientAutCookie')

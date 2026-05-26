@@ -10,14 +10,14 @@ export interface VtexIdCredential {
 
 export class VtexID extends ExternalClient {
   constructor(ctx: IOContext, opts?: InstanceOptions) {
-    super('http://api.vtexinternal.com', ctx, opts)
+    super('https://vtexid.vtex.com.br/api/vtexid', ctx, opts)
   }
 
   public validateToken = (token: string): Promise<VtexIdCredential> => {
     const account = encodeURIComponent(this.context.account)
 
     return this.http.post(
-      `/api/vtexid/credential/validate?an=${account}`,
+      `/credential/validate?an=${account}`,
       { token },
       {
         headers: {

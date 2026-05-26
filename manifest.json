@@ -32,7 +32,7 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "api.vtexinternal.com",
+        "host": "vtexid.vtex.com.br",
         "path": "/api/vtexid/credential/validate"
       }
     }
