@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Breaking Changes
+- `VtexIdclientAutCookie_*` cookies are no longer forwarded to downstream resolvers. Queries that relied on them to call storefront APIs will return `FORBIDDEN`. Use a storefront-context GraphIQL to explore storefront APIs.
+
+## [3.8.3-beta] - 2026-05-26
+
+### Changed
+- Bump the `node` builder from `6.x` to `7.x` and the local `@types/node` to `20.x`; pin `typescript` to `5.x` to match the toolchain used at link time.
+- Provide the missing `RecorderState`/`ParamsContext` type arguments to `Service<Clients>` so the project type-checks under the `7.x` toolchain.
+- Update the `outbound-access` policy to match the new validate endpoint.
+- Authenticate users against `POST /api/vtexid/credential/validate`, replacing the legacy `GET /pub/authenticated/user` call.
+- Accept the `VtexIdclientAutCookie` credential via HTTP header in addition to the cookie.
+
+### Security
+- Reject tokens whose audience is not `admin` so the IDE cannot be reached with storefront-audience credentials.
+- Strip `VtexIdclientAutCookie_*` cookies from the request before proxying it to `vtex.graphql-server`.
+
+## [3.8.2-beta] - 2026-05-20
+
+### Changed
+- Release bump only; no functional changes over 3.8.1-beta.
+
+## [3.8.1-beta] - 2026-05-20
+
+### Fixed
+- Pass the account name (`an`) when calling VTEX ID `/pub/authenticated/user`.
+
+### Changed
+- Bump the `node` builder from `4.x` to `6.x`.
+
 ## [3.8.0] - 2025-01-06
 
 ### Added
@@ -80,3 +109,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - I18n Ro.
 - Crowdin configuration file.
+
+
+[Unreleased]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.3-beta...HEAD
+[3.8.3-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.2-beta...v3.8.3-beta
+[3.8.2-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.1-beta...v3.8.2-beta
+[3.8.1-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.0...v3.8.1-beta
