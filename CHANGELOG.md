@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.9.0] - 2026-05-26
+
 ### Breaking Changes
 - `VtexIdclientAutCookie_*` cookies are no longer forwarded to downstream resolvers. Queries that relied on them to call storefront APIs will return `FORBIDDEN`. Use a storefront-context GraphIQL to explore storefront APIs.
 
