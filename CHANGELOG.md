@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.8.3-beta] - 2026-05-26
+
 ### Changed
 - Bump the `node` builder from `6.x` to `7.x` and the local `@types/node` to `20.x`; pin `typescript` to `5.x` to match the toolchain used at link time.
 - Provide the missing `RecorderState`/`ParamsContext` type arguments to `Service<Clients>` so the project type-checks under the `7.x` toolchain.
@@ -106,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Crowdin configuration file.
 
 
-[Unreleased]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.2-beta...HEAD
+[Unreleased]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.3-beta...HEAD
+[3.8.3-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.2-beta...v3.8.3-beta
 [3.8.2-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.1-beta...v3.8.2-beta
 [3.8.1-beta]: https://github.com/vtex-apps/admin-graphql-ide/compare/v3.8.0...v3.8.1-beta
