@@ -4,7 +4,34 @@ import { path, pick } from 'ramda'
 
 import type { Clients } from '../clients'
 
-const EMPTY_OBJECT = {}
+const ADMIN_AUDIENCE = 'admin'
+const STOREFRONT_COOKIE_PREFIX = 'VtexIdclientAutCookie_'
+
+const getAuthToken = (ctx: Context): string | undefined => {
+  const headerToken = ctx.request.headers.vtexidclientautcookie
+
+  if (typeof headerToken === 'string' && headerToken.length > 0) {
+    return headerToken
+  }
+
+  if (Array.isArray(headerToken) && headerToken[0]) {
+    return headerToken[0]
+  }
+
+  return ctx.cookies.get('VtexIdclientAutCookie') || undefined
+}
+
+const stripStorefrontCookies = (cookieHeader: string | undefined) => {
+  if (!cookieHeader) {
+    return cookieHeader
+  }
+
+  return cookieHeader
+    .split(';')
+    .map((c) => c.trim())
+    .filter((c) => c && !c.startsWith(STOREFRONT_COOKIE_PREFIX))
+    .join('; ')
+}
 
 export const ensureAdminUser = async (
   clients: Pick<Clients, 'sphinx' | 'vtexID'>,
@@ -16,8 +43,19 @@ export const ensureAdminUser = async (
     throw new ForbiddenError('No VtexIdclientAutCookie provided')
   }
 
-  const { user: email } =
-    (await vtexID.getIdUser(idToken)) || (EMPTY_OBJECT as any)
+  const credential = await vtexID.validateToken(idToken).catch(() => null)
+
+  if (!credential) {
+    throw new ForbiddenError('Invalid VtexIdclientAutCookie')
+  }
+
+  if (credential.audience && credential.audience !== ADMIN_AUDIENCE) {
+    throw new ForbiddenError(
+      'admin-graphql-ide is restricted to admin-audience tokens'
+    )
+  }
+
+  const email = credential.user
 
   if (!email) {
     throw new ForbiddenError(
@@ -42,7 +80,7 @@ export async function graphqlProxy(ctx: Context) {
     },
   } = ctx
 
-  const idToken = ctx.cookies.get('VtexIdclientAutCookie')
+  const idToken = getAuthToken(ctx)
 
   await ensureAdminUser(ctx.clients, idToken)
 
@@ -63,7 +101,14 @@ export async function graphqlProxy(ctx: Context) {
     'x-forwarded-host',
   ]
 
-  const headers = pick(headersToSend, ctx.request.headers)
+  const headers = pick(headersToSend, ctx.request.headers) as Record<
+    string,
+    string | string[] | undefined
+  >
+
+  if (typeof headers.cookie === 'string') {
+    headers.cookie = stripStorefrontCookies(headers.cookie)
+  }
 
   ctx.body = await graphqlServer
     .proxyGraphiQL(body, appId, headers)
