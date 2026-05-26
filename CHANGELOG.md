@@ -7,9 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Authenticate users against `POST /api/vtexid/credential/validate`, replacing the legacy `GET /pub/authenticated/user` call.
+- Accept the `VtexIdclientAutCookie` credential via HTTP header in addition to the cookie.
+
+### Security
+- Reject tokens whose audience is not `admin` so the IDE cannot be reached with storefront-audience credentials.
+- Strip `VtexIdclientAutCookie_*` cookies from the request before proxying it to `vtex.graphql-server`.
+
 ## [3.8.2-beta] - 2026-05-20
 
+### Changed
+- Release bump only; no functional changes over 3.8.1-beta.
+
 ## [3.8.1-beta] - 2026-05-20
+
+### Fixed
+- Pass the account name (`an`) when calling VTEX ID `/pub/authenticated/user`, unblocking cross-account checks until the canonical `credential/validate` migration lands.
+
+### Changed
+- Bump the `node` builder from `4.x` to `6.x`.
 
 ## [3.8.0] - 2025-01-06
 
